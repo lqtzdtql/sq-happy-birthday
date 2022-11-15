@@ -1,12 +1,8 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
-import { Context } from "../../util/context";
 import './index.css';
 
-function BlackHole() {
+function LittleBlackHole() {
   const canvas = useRef(null);
-  const { setStatus } = useContext(Context);
-  const alert = useRef(null);
-  const [visible,setVisible] = useState(false);
   const elements = 1000; // more the merrier
   const shiftmod = 1/6; // modifier for the x&y distance between each element: DEFAULT=1
   const angle = 37; // degree to rotate the canvas between each element
@@ -18,6 +14,7 @@ function BlackHole() {
   const clearScreenAlpha = 0.90; // alpha value for the screen erase each frame
   const zoom = 1.50; // zoom level
   const triheight = 0.10; 
+  const alert1 = useRef(null);
   
 
   function start(){
@@ -44,12 +41,14 @@ function BlackHole() {
   let framesRendered = 0;
 
   function draw() {
-    if (alert.current?.getContext) {
-      const ctx = alert.current.getContext("2d");
-      ctx.fillStyle='red';
-      ctx.font = "30px SimSun,Songti SC";
-      ctx.fillText('虫洞还未稳定，无法进行空间跃迁',0,30);
-    }
+    setTimeout(()=>{
+      if (alert.current?.getContext) {
+        const ctx = alert1.current.getContext("2d");
+        ctx.fillStyle='red';
+        ctx.font = "30px SimSun,Songti SC";
+        ctx.fillText('轰隆隆',0,30);
+      }
+    },2000)
     if (canvas.current?.getContext) {
       const context = canvas.current.getContext("2d");
       context.setTransform(1, 0, 0, 1, 0, 0);
@@ -126,27 +125,14 @@ function BlackHole() {
     start();
   },[]);
 
-  const spaceTransition = () => {
-    const current= new Date().getTime() + 8 * 3600 * 1000;
-    const target = (new Date('Sat Nov 19 2022 00:00:00 GMT+0800')).getTime();
-    if (current < target) {
-      setVisible(true);
-      setTimeout(()=>{
-        setVisible(false);
-      },2000);
-    } else {
-      setStatus(2);
-    }
-  }
-
   
 
   return (
     <div>
-      <canvas id="blackHole" width={ 300 } height={ 300 }  ref={canvas} onClick={spaceTransition}></canvas>
-      {visible && <canvas id="alert" width={ 500 } height={ 200 }  ref={alert} onClick={spaceTransition}></canvas>}
+      <canvas id="littleBlackHole" width={ 200 } height={ 200 }  ref={canvas}></canvas>
+      <canvas id="alert1" width={ 500 } height={ 200 }  ref={alert1} ></canvas>
     </div>
   );
 }
 
-export default BlackHole;
+export default LittleBlackHole;
