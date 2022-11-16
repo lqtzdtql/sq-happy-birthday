@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.9de5bdfa.css",
-    "main.js": "/static/js/main.2dd28d4f.js",
-    "static/media/dream2.png": "/static/media/dream2.0607736f34fa108669eb.png",
-    "static/media/dream1.png": "/static/media/dream1.c4159a399c81801ed980.png",
-    "static/media/we.png": "/static/media/we.98781e12fef6cd0f5b00.png",
-    "static/media/happy-birthday.jpeg": "/static/media/happy-birthday.fdafa3a4e7c43bbac669.jpeg",
-    "index.html": "/index.html",
-    "main.9de5bdfa.css.map": "/static/css/main.9de5bdfa.css.map",
-    "main.2dd28d4f.js.map": "/static/js/main.2dd28d4f.js.map"
+    "main.css": "/sq-happy-birthday/static/css/main.9de5bdfa.css",
+    "main.js": "/sq-happy-birthday/static/js/main.8924e29b.js",
+    "static/media/dream2.png": "/sq-happy-birthday/static/media/dream2.0607736f34fa108669eb.png",
+    "static/media/dream1.png": "/sq-happy-birthday/static/media/dream1.c4159a399c81801ed980.png",
+    "static/media/we.png": "/sq-happy-birthday/static/media/we.98781e12fef6cd0f5b00.png",
+    "static/media/happy-birthday.jpeg": "/sq-happy-birthday/static/media/happy-birthday.fdafa3a4e7c43bbac669.jpeg",
+    "index.html": "/sq-happy-birthday/index.html",
+    "main.9de5bdfa.css.map": "/sq-happy-birthday/static/css/main.9de5bdfa.css.map",
+    "main.8924e29b.js.map": "/sq-happy-birthday/static/js/main.8924e29b.js.map"
   },
   "entrypoints": [
     "static/css/main.9de5bdfa.css",
-    "static/js/main.2dd28d4f.js"
+    "static/js/main.8924e29b.js"
   ]
 }
