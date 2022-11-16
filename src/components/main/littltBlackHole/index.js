@@ -42,11 +42,11 @@ function LittleBlackHole() {
 
   function draw() {
     setTimeout(()=>{
-      if (alert.current?.getContext) {
+      if (alert1.current?.getContext) {
         const ctx = alert1.current.getContext("2d");
         ctx.fillStyle='red';
-        ctx.font = "30px SimSun,Songti SC";
-        ctx.fillText('轰隆隆',0,30);
+        ctx.font = "50px SimSun,Songti SC";
+        ctx.fillText('轰隆隆',0,50);
       }
     },2000)
     if (canvas.current?.getContext) {
@@ -130,7 +130,7 @@ function LittleBlackHole() {
   return (
     <div>
       <canvas id="littleBlackHole" width={ 200 } height={ 200 }  ref={canvas}></canvas>
-      <canvas id="alert1" width={ 500 } height={ 200 }  ref={alert1} ></canvas>
+      <canvas id="alert1" width={ 200 } height={ 100 }  ref={alert1} ></canvas>
     </div>
   );
 }

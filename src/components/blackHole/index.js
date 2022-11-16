@@ -135,6 +135,8 @@ function BlackHole() {
         setVisible(false);
       },2000);
     } else {
+      let audio = document.getElementById("audio");
+      audio.play();
       setStatus(2);
     }
   }

@@ -9,11 +9,11 @@
 }
 
 #alert1 {
-  width: 100px;
-  height: 50px;
+  width: 200px;
+  height: 100px;
   background-color: rgba(255, 255, 255, 0); 
   z-index: 3;
   position: absolute;
-  top:35%;
-  left:37%;
+  top:23%;
+  left:61%;
 }
