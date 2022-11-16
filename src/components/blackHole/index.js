@@ -129,7 +129,7 @@ function BlackHole() {
   const spaceTransition = () => {
     const current= new Date().getTime() + 8 * 3600 * 1000;
     const target = (new Date('Sat Nov 19 2022 00:00:00 GMT+0800')).getTime();
-    if (current > target) {
+    if (current < target) {
       setVisible(true);
       setTimeout(()=>{
         setVisible(false);
